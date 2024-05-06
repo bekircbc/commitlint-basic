@@ -1,21 +1,13 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    condition : "type",
-    rule: "always",
-    level: "error",
-    value: [
-    'build',
-    'chore',
-    'ci',
-    'docs',
-    'feat',
-    'fix',
-    'perf',
-    'refactor',
-    'revert',
-    'style',
-    'test'
-  ];
-  }
+    'header-max-length': [2, 'always', 72],
+    'type-enum': [2, 'always', ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore', 'perf']],
+    'type-case': [2, 'always', 'lower-case'],
+    'type-empty': [2, 'never'],
+    'scope-case': [2, 'always', 'lower-case'],
+    'subject-case': [2, 'always', 'sentence-case'],
+    'subject-empty': [2, 'never'],
+  },
 };
+
